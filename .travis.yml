@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+    - "0.12"
+env:
+  global:
+    - "FTP_USER=travis"
+    - secure: "chJRyUTF1mAPo00POUQeClDRc2wstlfETwq/OaRLskpQIf2JKKRjqhD2Yc9LUibjYl7tNZzX5PhpwAkP1VQQm0DO9YSmQvUlWrhhCThjQSPblrvHtwMWhs3tetP0TiObQXMpI+M+PIhKeiLB6dNDA8OFwblffJb49KEsDVAZ31Vt681NlFMBMl/7SyibyNKvXi+aJYePrSvvy9/4aHYz2WiXdzEqu+tcMKHUeLTfnO+OpI9/QJZahPEzemrO6VSY4VsAA9JV0s16pldQNenGq6j/rF6TymFsclFwt/W7gL96zxhtMCAwRG9JZ82l3WbCoVXWq5hbuMS0/38Y2w7Lz3bsF5iZlSSXUqOB2SzwYVHkpm/Ck3biCaP3aveCn2lgNPciJHPGCboXcYevECqrs4FJrrnNxfUAAiDtQl8iq5KLX2WvT01qijeYZVdm150Dxo9kdXvTV52IHIqWi5Ed+Bhbd6eNEJq/VXU+F3GqnH+n4rRa82oqbQ1QIH7J4rF5twxfSvCm+eUGcLBkB2t4aHfNk1Lb3SFRovRtHCZ7nPnNm9e/fZoTn+0IfiVJsNDoIof6CdqorKF4YkjsWqKtdZRgCjcN5ZbRcdQ1yO8vyW4Zw1hQUdUz3UQWroNhBGfrtWJb1JjZ504ElNOJJU0EIcuAukPhtxsHK+9SBCKL9wQ="
+sudo: false
+addons:
+  apt:
+    packages:
+      - lftp
+script:
+  - find svg -type f \( -name "*.js" -o -name "*.css" -o -name "*.svg" -o -name "*.ttf" -o -name "*.eot" -o -name "*.woff" -o -name "*.woff2" \) -size +1k -exec sh -c 'gzip -9 -f -c "$1" > "$1.gz" && touch -r "$1" "$1.gz"' -- {} \;
+  - find font -type f \( -name "*.js" -o -name "*.css" -o -name "*.svg" -o -name "*.ttf" -o -name "*.eot" -o -name "*.woff" -o -name "*.woff2" \) -size +1k -exec sh -c 'gzip -9 -f -c "$1" > "$1.gz" && touch -r "$1" "$1.gz"' -- {} \;
+after_success:
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && lftp -u $FTP_USER,$FTP_PASSWORD -p 20002 sftp://77.66.8.130:20002/gatewayapi/ -e "cd icons; mirror --parallel=10 -p -R svg; mirror --parallel=10 -p -R font; exit"
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && lftp -u $FTP_USER,$FTP_PASSWORD -p 20002 sftp://77.66.8.131:20002/gatewayapi/ -e "cd icons; mirror --parallel=10 -p -R svg; mirror --parallel=10 -p -R font; exit"
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_TAG && lftp -u $FTP_USER,$FTP_PASSWORD -p 20002 sftp://77.66.8.130:20002/gatewayapi.com/ -e "cd icons; mirror --parallel=10 -p -R svg; mirror --parallel=10 -p -R font; exit"
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_TAG && lftp -u $FTP_USER,$FTP_PASSWORD -p 20002 sftp://77.66.8.131:20002/gatewayapi.com/ -e "cd icons; mirror --parallel=10 -p -R svg; mirror --parallel=10 -p -R font; exit"
+notifications:
+  slack:
+    rooms:
+      secure: "3tU9qwRGziABjNs5EMW5yZVM24UCoObq60fB/lIIXfG/GtXqI7Noo3jkjTjMY5630bT54DZpXUzU4DWy61jZw5pY15uDTHUovGAjruc4+QaSVYOoxystzzrD8dHZ6sa0pQpz2AWdYjRIFwPa/8yRs6pWO7lSL/Co8DoSz/v3qUVeGF9CB4RrW+Ehb8qLKBxJZk36Kj/4+EV8P2zQY/iSn7wiy2IBdoiKQeshxYOy3B+toKo5AeLAGGSMtCSZlWqUzNtshnZic2+QHctuWtlK+jwSJ+8sX9cME2xH7efj/xRIkTpJkW4/+v6akQVXcKEDn+eE+J4YYM+D/luIioRO8eAD0iCSjquIS6EZFYQY+sqhnVIGtBh6t5UV58zy7/RJ4poY+aGsBMRcodfthJdz3Gy4AU47i1PvB510ddqgOEgdcRmUmUXKBrKrEZL7Ef1nw6IeUFwW2UcrQdEqbitYH/FjX9YguLcBVCtWX4MSAaHDDWbraq1G1ziNWMntR+Hnb4DR+bVBIah52cbALRzhg+GckMq0YJdLHrvx/GsLE0XGS21psQzWX9ZVGX6CbLH01m3fv8rJRvKMOUdVhtP3lrd7FEg8FUq0LPQ4h4RjzKFA1VVswgfriN+F5sDiQ9SaVizMy3+TNmn/0ykY6syWbyDnjDYoYSB+Leh5TMguWWg="
+  email: false
