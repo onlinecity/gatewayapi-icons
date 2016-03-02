@@ -1,0 +1,8 @@
+{
+  "name": "gatewayapi-icons",
+  "description": "Icons for GatewayAPI.com",
+  "private": true,
+  "main": [
+    "_/icons.scss"
+  ]
+}
