@@ -1,3 +1,8 @@
+// Supports font-path override if you need to extend the font package from your apps.
+// Remember to update the pasted CSS from icomoon with this variable:
+// url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons...')
+$gatewayapi-icons-font-path: ".." !default;
+
 /**
  * UPGRADE INSTRUCTIONS:
  * - go to icomoon.io
@@ -7,9 +12,8 @@
  * - build the font and replace the font files in font/fonts
  * - also download the SVG/PNG-package and save the results in svg
  * - take the css from the generated font-package and replace from the tag following i {...} and below with the same parts from the css.
+ * - #{$gatewayapi-icons-font-path} variable must be used in the font urls.
  * - update the urls of the font-face to cache-bust with something unique
- * - ???
- * - PROFIT
  */
 .gwi-14 {
   font-size: 14px !important;
@@ -74,10 +78,10 @@
 
 @font-face {
   font-family: 'GatewayAPI-Icons';
-  src: url('../font/fonts/GatewayAPI-Icons.woff2?tfc44') format('woff2'),
-  url('../font/fonts/GatewayAPI-Icons.ttf?tfc44') format('truetype'),
-  url('../font/fonts/GatewayAPI-Icons.woff?tfc44') format('woff'),
-  url('../font/fonts/GatewayAPI-Icons.svg?tfc44#GatewayAPI-Icons') format('svg');
+  src: url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.woff2?tfc44') format('woff2'),
+  url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.ttf?tfc44') format('truetype'),
+  url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.woff?tfc44') format('woff'),
+  url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.svg?tfc44#GatewayAPI-Icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
