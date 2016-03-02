@@ -10,14 +10,20 @@ addons:
   apt:
     packages:
       - lftp
+cache:
+  directories:
+    - vendor/bundle
+install:
+  - bundle install --jobs=3 --retry=3 --path vendor/bundle --binstubs
 script:
+  - cd _ && ./../bin/compass compile && cd ..
   - find svg -type f \( -name "*.js" -o -name "*.css" -o -name "*.svg" -o -name "*.ttf" -o -name "*.eot" -o -name "*.woff" -o -name "*.woff2" \) -size +1k -exec sh -c 'gzip -9 -f -c "$1" > "$1.gz" && touch -r "$1" "$1.gz"' -- {} \;
   - find font -type f \( -name "*.js" -o -name "*.css" -o -name "*.svg" -o -name "*.ttf" -o -name "*.eot" -o -name "*.woff" -o -name "*.woff2" \) -size +1k -exec sh -c 'gzip -9 -f -c "$1" > "$1.gz" && touch -r "$1" "$1.gz"' -- {} \;
 after_success:
-  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && lftp -u $FTP_USER,$FTP_PASSWORD -p 20002 sftp://77.66.8.130:20002/gatewayapi/ -e "cd icons; mirror --parallel=10 -p -R svg; mirror --parallel=10 -p -R font; exit"
-  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && lftp -u $FTP_USER,$FTP_PASSWORD -p 20002 sftp://77.66.8.131:20002/gatewayapi/ -e "cd icons; mirror --parallel=10 -p -R svg; mirror --parallel=10 -p -R font; exit"
-  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_TAG && lftp -u $FTP_USER,$FTP_PASSWORD -p 20002 sftp://77.66.8.130:20002/gatewayapi.com/ -e "cd icons; mirror --parallel=10 -p -R svg; mirror --parallel=10 -p -R font; exit"
-  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_TAG && lftp -u $FTP_USER,$FTP_PASSWORD -p 20002 sftp://77.66.8.131:20002/gatewayapi.com/ -e "cd icons; mirror --parallel=10 -p -R svg; mirror --parallel=10 -p -R font; exit"
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && lftp -u $FTP_USER,$FTP_PASSWORD -p 20002 sftp://77.66.8.130:20002/gatewayapi/ -e "cd icons; mirror --parallel=10 -p -R svg; mirror --parallel=10 -p -R font; mirror --parallel=10 -p -R _; exit"
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && lftp -u $FTP_USER,$FTP_PASSWORD -p 20002 sftp://77.66.8.131:20002/gatewayapi/ -e "cd icons; mirror --parallel=10 -p -R svg; mirror --parallel=10 -p -R font; mirror --parallel=10 -p -R _; exit"
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_TAG && lftp -u $FTP_USER,$FTP_PASSWORD -p 20002 sftp://77.66.8.130:20002/gatewayapi.com/ -e "cd icons; mirror --parallel=10 -p -R svg; mirror --parallel=10 -p -R font; mirror --parallel=10 -p -R _; exit"
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_TAG && lftp -u $FTP_USER,$FTP_PASSWORD -p 20002 sftp://77.66.8.131:20002/gatewayapi.com/ -e "cd icons; mirror --parallel=10 -p -R svg; mirror --parallel=10 -p -R font; mirror --parallel=10 -p -R _; exit"
 notifications:
   slack:
     rooms:
