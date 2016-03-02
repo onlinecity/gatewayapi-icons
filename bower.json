@@ -4,5 +4,12 @@
   "private": true,
   "main": [
     "_/icons.scss"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
   ]
 }
