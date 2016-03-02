@@ -1,0 +1,336 @@
+/**
+ * UPGRADE INSTRUCTIONS:
+ * - go to icomoon.io
+ * -> recommended: log in with the devs@oc.dk account and load the GatewayAPI-project
+ * -> fallback: import the font/selection.json
+ * - do what you have to do
+ * - build the font and replace the font files in font/fonts
+ * - also download the SVG/PNG-package and save the results in svg
+ * - take the css from the generated font-package and replace from the tag following i {...} and below with the same parts from the css.
+ * - update the urls of the font-face to cache-bust with something unique
+ * - ???
+ * - PROFIT
+ */
+.gwi-14 {
+  font-size: 14px !important;
+  line-height: 14px;
+
+  &.gwi-fw {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    text-align: center;
+    line-height: 14px;
+  }
+}
+
+.gwi-16 {
+  font-size: 16px !important;
+  line-height: 16px;
+
+  &.gwi-fw {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+  }
+}
+
+.gwi-24 {
+  font-size: 24px !important;
+  line-height: 24px;
+
+  &.gwi-fw {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+  }
+}
+
+.gwi-32 {
+  font-size: 32px !important;
+
+  &.gwi-fw {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+  }
+}
+
+.gwi-t--2 {
+  position: relative;
+  top: -2px;
+}
+
+.gwi-t-2 {
+  position: relative;
+  top: 2px;
+}
+
+@font-face {
+  font-family: 'GatewayAPI-Icons';
+  src: url('../font/fonts/GatewayAPI-Icons.woff2?tfc44') format('woff2'),
+  url('../font/fonts/GatewayAPI-Icons.ttf?tfc44') format('truetype'),
+  url('../font/fonts/GatewayAPI-Icons.woff?tfc44') format('woff'),
+  url('../font/fonts/GatewayAPI-Icons.svg?tfc44#GatewayAPI-Icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'GatewayAPI-Icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/***** WHEN UPDATING, REPLACE BELOW THIS LINE! *****/
+
+.gwi-chat_top_menu:before {
+  content: "\e932";
+}
+
+.gwi-profile-logout:before {
+  content: "\e914";
+}
+
+.gwi-accounts:before {
+  content: "\e915";
+}
+
+.gwi-billing-details:before {
+  content: "\e919";
+}
+
+.gwi-chat_left_menu:before {
+  content: "\e933";
+}
+
+.gwi-settings-oauth-key:before {
+  content: "\e909";
+}
+
+.gwi-delete-2:before {
+  content: "\e927";
+}
+
+.gwi-accounts-add:before {
+  content: "\e910";
+}
+
+.gwi-edit:before {
+  content: "\e921";
+}
+
+.gwi-chevron-left:before {
+  content: "\e906";
+}
+
+.gwi-bell_on:before {
+  content: "\e934";
+}
+
+.gwi-bell_off:before {
+  content: "\e935";
+}
+
+.gwi-enter:before {
+  content: "\e936";
+}
+
+.gwi-border:before {
+  content: "\e7f6";
+}
+
+.gwi-wallet:before {
+  content: "\e912";
+}
+
+.gwi-bag-euro:before {
+  content: "\e75f";
+}
+
+.gwi-rocket:before {
+  content: "\e837";
+}
+
+.gwi-balance:before {
+  content: "\e839";
+}
+
+.gwi-invoice:before {
+  content: "\e913";
+}
+
+.gwi-freeze:before {
+  content: "\e916";
+}
+
+.gwi-defrost:before {
+  content: "\e920";
+}
+
+.gwi-newline:before {
+  content: "\e922";
+}
+
+.gwi-prices-email:before {
+  content: "\e92c";
+}
+
+.gwi-info:before {
+  content: "\e92d";
+}
+
+.gwi-settings-credentials:before {
+  content: "\e928";
+}
+
+.gwi-deathstar:before {
+  content: "\e929";
+}
+
+.gwi-settings-webhook:before {
+  content: "\e92a";
+}
+
+.gwi-statusio:before {
+  content: "\e92b";
+}
+
+.gwi-search:before {
+  content: "\e930";
+}
+
+.gwi-account_overview:before {
+  content: "\e92e";
+}
+
+.gwi-edit-2:before {
+  content: "\e900";
+}
+
+.gwi-back:before {
+  content: "\e901";
+}
+
+.gwi-warning:before {
+  content: "\e911";
+}
+
+.gwi-user-add:before {
+  content: "\e925";
+}
+
+.gwi-dropdown:before {
+  content: "\e902";
+}
+
+.gwi-chevron-up:before {
+  content: "\e903";
+}
+
+.gwi-chevron-right:before {
+  content: "\e904";
+}
+
+.gwi-chevron-down:before {
+  content: "\e905";
+}
+
+.gwi-profile-members:before {
+  content: "\e907";
+}
+
+.gwi-profile-me:before {
+  content: "\e908";
+}
+
+.gwi-settings-ip:before {
+  content: "\e90a";
+}
+
+.gwi-prices-text:before {
+  content: "\e90b";
+}
+
+.gwi-billing-transactions:before {
+  content: "\e90c";
+}
+
+.gwi-support:before {
+  content: "\e90d";
+}
+
+.gwi-documentation:before {
+  content: "\e90e";
+}
+
+.gwi-billing:before {
+  content: "\e90f";
+}
+
+.gwi-download:before {
+  content: "\e931";
+}
+
+.gwi-trafficlog:before {
+  content: "\e92f";
+}
+
+.gwi-enable:before {
+  content: "\e923";
+}
+
+.gwi-disable:before {
+  content: "\e924";
+}
+
+.gwi-delete:before {
+  content: "\e917";
+}
+
+.gwi-oauth-facebook:before {
+  content: "\e91e";
+}
+
+.gwi-oauth-google:before {
+  content: "\e91f";
+}
+
+.gwi-notifications:before {
+  content: "\e918";
+}
+
+.gwi-billing-invoices:before {
+  content: "\e91a";
+}
+
+.gwi-settings:before {
+  content: "\e91b";
+}
+
+.gwi-prices:before {
+  content: "\e91c";
+}
+
+.gwi-dashboard:before {
+  content: "\e91d";
+}
+
+.gwi-billing-buy-credit:before {
+  content: "\e926";
+}
