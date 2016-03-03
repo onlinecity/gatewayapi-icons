@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'GatewayAPI-Icons';
     src:
-        url('fonts/GatewayAPI-Icons.woff2?agtym2') format('woff2'),
-        url('fonts/GatewayAPI-Icons.ttf?agtym2') format('truetype'),
-        url('fonts/GatewayAPI-Icons.woff?agtym2') format('woff'),
-        url('fonts/GatewayAPI-Icons.svg?agtym2#GatewayAPI-Icons') format('svg');
+        url('fonts/GatewayAPI-Icons.woff2?radlnj') format('woff2'),
+        url('fonts/GatewayAPI-Icons.ttf?radlnj') format('truetype'),
+        url('fonts/GatewayAPI-Icons.woff?radlnj') format('woff'),
+        url('fonts/GatewayAPI-Icons.svg?radlnj#GatewayAPI-Icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -149,6 +149,9 @@ i {
 }
 .gwi-settings-oauth-key:before {
     content: "\e909";
+}
+.gwi-goto-gwadmin:before {
+    content: "\e937";
 }
 .gwi-chat_left_menu:before {
     content: "\e933";

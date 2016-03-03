@@ -78,10 +78,10 @@ $gatewayapi-icons-font-path: ".." !default;
 
 @font-face {
   font-family: 'GatewayAPI-Icons';
-  src: url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.woff2?tfc44') format('woff2'),
-  url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.ttf?tfc44') format('truetype'),
-  url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.woff?tfc44') format('woff'),
-  url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.svg?tfc44#GatewayAPI-Icons') format('svg');
+  src: url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.woff2?radlnj') format('woff2'),
+  url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.ttf?radlnj') format('truetype'),
+  url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.woff?radlnj') format('woff'),
+  url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.svg?radlnj#GatewayAPI-Icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -102,239 +102,183 @@ i {
 }
 
 /***** WHEN UPDATING, REPLACE BELOW THIS LINE! *****/
-
 .gwi-chat_top_menu:before {
-  content: "\e932";
+    content: "\e932";
 }
-
 .gwi-profile-logout:before {
-  content: "\e914";
+    content: "\e914";
 }
-
 .gwi-accounts:before {
-  content: "\e915";
+    content: "\e915";
 }
-
 .gwi-billing-details:before {
-  content: "\e919";
+    content: "\e919";
 }
-
-.gwi-chat_left_menu:before {
-  content: "\e933";
-}
-
-.gwi-settings-oauth-key:before {
-  content: "\e909";
-}
-
-.gwi-delete-2:before {
-  content: "\e927";
-}
-
-.gwi-accounts-add:before {
-  content: "\e910";
-}
-
-.gwi-edit:before {
-  content: "\e921";
-}
-
-.gwi-chevron-left:before {
-  content: "\e906";
-}
-
 .gwi-bell_on:before {
-  content: "\e934";
+    content: "\e934";
 }
-
 .gwi-bell_off:before {
-  content: "\e935";
+    content: "\e935";
 }
-
 .gwi-enter:before {
-  content: "\e936";
+    content: "\e936";
 }
-
 .gwi-border:before {
-  content: "\e7f6";
+    content: "\e7f6";
 }
-
 .gwi-wallet:before {
-  content: "\e912";
+    content: "\e912";
 }
-
-.gwi-bag-euro:before {
-  content: "\e75f";
+.gwi-add-credit:before {
+    content: "\e75f";
 }
-
-.gwi-rocket:before {
-  content: "\e837";
+.gwi-invoice-process:before {
+    content: "\e837";
 }
-
-.gwi-balance:before {
-  content: "\e839";
+.gwi-credit-limit:before {
+    content: "\e839";
 }
-
 .gwi-invoice:before {
-  content: "\e913";
+    content: "\e913";
 }
-
 .gwi-freeze:before {
-  content: "\e916";
+    content: "\e916";
 }
-
-.gwi-defrost:before {
-  content: "\e920";
+.gwi-unfreeze:before {
+    content: "\e920";
 }
-
 .gwi-newline:before {
-  content: "\e922";
+    content: "\e922";
 }
-
 .gwi-prices-email:before {
-  content: "\e92c";
+    content: "\e92c";
 }
-
 .gwi-info:before {
-  content: "\e92d";
+    content: "\e92d";
 }
-
 .gwi-settings-credentials:before {
-  content: "\e928";
+    content: "\e928";
 }
-
 .gwi-deathstar:before {
-  content: "\e929";
+    content: "\e929";
 }
-
 .gwi-settings-webhook:before {
-  content: "\e92a";
+    content: "\e92a";
 }
-
 .gwi-statusio:before {
-  content: "\e92b";
+    content: "\e92b";
 }
-
 .gwi-search:before {
-  content: "\e930";
+    content: "\e930";
 }
-
 .gwi-account_overview:before {
-  content: "\e92e";
+    content: "\e92e";
 }
-
 .gwi-edit-2:before {
-  content: "\e900";
+    content: "\e900";
 }
-
 .gwi-back:before {
-  content: "\e901";
+    content: "\e901";
 }
-
 .gwi-warning:before {
-  content: "\e911";
+    content: "\e911";
 }
-
 .gwi-user-add:before {
-  content: "\e925";
+    content: "\e925";
 }
-
 .gwi-dropdown:before {
-  content: "\e902";
+    content: "\e902";
 }
-
 .gwi-chevron-up:before {
-  content: "\e903";
+    content: "\e903";
 }
-
 .gwi-chevron-right:before {
-  content: "\e904";
+    content: "\e904";
 }
-
 .gwi-chevron-down:before {
-  content: "\e905";
+    content: "\e905";
 }
-
 .gwi-profile-members:before {
-  content: "\e907";
+    content: "\e907";
 }
-
 .gwi-profile-me:before {
-  content: "\e908";
+    content: "\e908";
 }
-
 .gwi-settings-ip:before {
-  content: "\e90a";
+    content: "\e90a";
 }
-
 .gwi-prices-text:before {
-  content: "\e90b";
+    content: "\e90b";
 }
-
 .gwi-billing-transactions:before {
-  content: "\e90c";
+    content: "\e90c";
 }
-
 .gwi-support:before {
-  content: "\e90d";
+    content: "\e90d";
 }
-
 .gwi-documentation:before {
-  content: "\e90e";
+    content: "\e90e";
 }
-
 .gwi-billing:before {
-  content: "\e90f";
+    content: "\e90f";
 }
-
 .gwi-download:before {
-  content: "\e931";
+    content: "\e931";
 }
-
+.gwi-settings-oauth-key:before {
+    content: "\e909";
+}
+.gwi-goto-gwadmin:before {
+    content: "\e937";
+}
+.gwi-chat_left_menu:before {
+    content: "\e933";
+}
+.gwi-delete-2:before {
+    content: "\e927";
+}
+.gwi-accounts-add:before {
+    content: "\e910";
+}
+.gwi-edit:before {
+    content: "\e921";
+}
+.gwi-chevron-left:before {
+    content: "\e906";
+}
 .gwi-trafficlog:before {
-  content: "\e92f";
+    content: "\e92f";
 }
-
 .gwi-enable:before {
-  content: "\e923";
+    content: "\e923";
 }
-
 .gwi-disable:before {
-  content: "\e924";
+    content: "\e924";
 }
-
 .gwi-delete:before {
-  content: "\e917";
+    content: "\e917";
 }
-
 .gwi-oauth-facebook:before {
-  content: "\e91e";
+    content: "\e91e";
 }
-
 .gwi-oauth-google:before {
-  content: "\e91f";
+    content: "\e91f";
 }
-
 .gwi-notifications:before {
-  content: "\e918";
+    content: "\e918";
 }
-
 .gwi-billing-invoices:before {
-  content: "\e91a";
+    content: "\e91a";
 }
-
 .gwi-settings:before {
-  content: "\e91b";
+    content: "\e91b";
 }
-
 .gwi-prices:before {
-  content: "\e91c";
+    content: "\e91c";
 }
-
 .gwi-dashboard:before {
-  content: "\e91d";
+    content: "\e91d";
 }
-
 .gwi-billing-buy-credit:before {
-  content: "\e926";
+    content: "\e926";
 }
