@@ -86,7 +86,7 @@ $gatewayapi-icons-font-path: ".." !default;
   font-style: normal;
 }
 
-i {
+i[class^="gwi-"], i[class*=" gwi-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'GatewayAPI-Icons' !important;
   speak: none;
