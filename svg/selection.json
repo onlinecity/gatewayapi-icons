@@ -19,7 +19,8 @@
 				"order": 1,
 				"id": 0,
 				"prevSize": 28,
-				"name": "star-o"
+				"name": "star-o",
+				"code": 59704
 			},
 			"setIdx": 0,
 			"setId": 21,
@@ -42,7 +43,8 @@
 				"order": 1,
 				"id": 0,
 				"prevSize": 24,
-				"name": "fast-forward"
+				"name": "fast-forward",
+				"code": 59705
 			},
 			"setIdx": 1,
 			"setId": 20,
@@ -462,7 +464,8 @@
 				"order": 1,
 				"id": 19,
 				"prevSize": 24,
-				"name": "delete2"
+				"name": "delete2",
+				"code": 59706
 			},
 			"setIdx": 4,
 			"setId": 13,
