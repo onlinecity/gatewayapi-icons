@@ -2,7 +2,7 @@
  * @copyright Copyright (c) 2016 IcoMoon.io
  * @license   Licensed under MIT license
  *            See https://github.com/Keyamoon/svgxuse
- * @version   1.1.10
+ * @version   1.1.16
  */
 /*jslint browser: true */
 /*global XDomainRequest, MutationObserver, window */
@@ -77,7 +77,14 @@
                     observeChanges(); // watch for changes to DOM
                 }
             }
-            function onload(xhr) {
+            function attrUpdateFunc(spec) {
+                return function () {
+                    if (cache[spec.base] !== true) {
+                        spec.useEl.setAttributeNS(xlinkNS, 'xlink:href', '#' + spec.hash);
+                    }
+                };
+            }
+            function onloadFunc(xhr) {
                 return function () {
                     var body = document.body;
                     var x = document.createElement('x');
@@ -86,6 +93,7 @@
                     x.innerHTML = xhr.responseText;
                     svg = x.getElementsByTagName('svg')[0];
                     if (svg) {
+                        svg.setAttribute('aria-hidden', 'true');
                         svg.style.position = 'absolute';
                         svg.style.width = 0;
                         svg.style.height = 0;
@@ -124,14 +132,20 @@
                         base = fallback;
                     }
                     if (base.length) {
+                        // schedule updating xlink:href
                         xhr = cache[base];
                         if (xhr !== true) {
-                            uses[i].setAttributeNS(xlinkNS, 'xlink:href', '#' + hash);
+                            // true signifies that prepending the SVG was not required
+                            setTimeout(attrUpdateFunc({
+                                useEl: uses[i],
+                                base: base,
+                                hash: hash
+                            }), 0);
                         }
                         if (xhr === undefined) {
                             xhr = new Request();
                             cache[base] = xhr;
-                            xhr.onload = onload(xhr);
+                            xhr.onload = onloadFunc(xhr);
                             xhr.onerror = onErrorTimeout(xhr);
                             xhr.ontimeout = onErrorTimeout(xhr);
                             xhr.open('GET', base);
@@ -140,9 +154,17 @@
                         }
                     }
                 } else {
-                    // remember this URL if the use element was not empty and no request was sent
-                    if (!isHidden && cache[base] === undefined) {
-                        cache[base] = true;
+                    if (!isHidden) {
+                        if (cache[base] === undefined) {
+                            // remember this URL if the use element was not empty and no request was sent
+                            cache[base] = true;
+                        } else if (cache[base].onload) {
+                            // if it turns out that prepending the SVG is not necessary,
+                            // abort the in-progress xhr.
+                            cache[base].abort();
+                            cache[base].onload = undefined;
+                            cache[base] = true;
+                        }
                     }
                 }
             }
@@ -153,7 +175,7 @@
         // The load event fires when all resources have finished loading, which allows detecting whether SVG use elements are empty.
         window.addEventListener('load', function winLoad() {
             window.removeEventListener('load', winLoad, false); // to prevent memory leaks
-            checkUseElems();
+            tid = setTimeout(checkUseElems, 0);
         }, false);
     }
 }());
