@@ -13,6 +13,10 @@ Example showing how to change the color/size of the icons:
 }
 ======================================================================================== */
 
+.icon-star {
+	width: 0.9287109375em;
+}
+
 .icon-star-o {
 	width: 0.9287109375em;
 }

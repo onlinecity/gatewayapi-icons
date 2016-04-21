@@ -104,6 +104,9 @@ i[class^="gwi-"], i[class*=" gwi-"] {
 // WHEN UPDATING, REPLACE BELOW THIS LINE!
 // Copy .gwi- classes from font/style.css
 
+.gwi-star:before {
+    content: "\e93b";
+}
 .gwi-star-o:before {
     content: "\e938";
 }
@@ -293,4 +296,3 @@ i[class^="gwi-"], i[class*=" gwi-"] {
 .gwi-chevron-left:before {
     content: "\e906";
 }
-

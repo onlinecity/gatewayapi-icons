@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'GatewayAPI-Icons';
     src:
-        url('fonts/GatewayAPI-Icons.woff2?ownrvg') format('woff2'),
-        url('fonts/GatewayAPI-Icons.ttf?ownrvg') format('truetype'),
-        url('fonts/GatewayAPI-Icons.woff?ownrvg') format('woff'),
-        url('fonts/GatewayAPI-Icons.svg?ownrvg#GatewayAPI-Icons') format('svg');
+        url('fonts/GatewayAPI-Icons.woff2?fg3dc8') format('woff2'),
+        url('fonts/GatewayAPI-Icons.ttf?fg3dc8') format('truetype'),
+        url('fonts/GatewayAPI-Icons.woff?fg3dc8') format('woff'),
+        url('fonts/GatewayAPI-Icons.svg?fg3dc8#GatewayAPI-Icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,6 +24,9 @@ i {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.gwi-star:before {
+    content: "\e93b";
+}
 .gwi-star-o:before {
     content: "\e938";
 }
