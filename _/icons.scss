@@ -104,50 +104,14 @@ i[class^="gwi-"], i[class*=" gwi-"] {
 // WHEN UPDATING, REPLACE BELOW THIS LINE!
 // Copy .gwi- classes from font/style.css
 
-.gwi-star:before {
-    content: "\e93b";
-}
-.gwi-star-o:before {
-    content: "\e938";
-}
-.gwi-trafficlog:before {
-    content: "\e92f";
-}
-.gwi-enable:before {
-    content: "\e923";
-}
-.gwi-disable:before {
-    content: "\e924";
-}
-.gwi-delete:before {
-    content: "\e917";
-}
-.gwi-oauth-facebook:before {
-    content: "\e91e";
-}
-.gwi-oauth-google:before {
-    content: "\e91f";
-}
-.gwi-notifications:before {
-    content: "\e918";
-}
-.gwi-billing-invoices:before {
-    content: "\e91a";
-}
-.gwi-settings:before {
-    content: "\e91b";
-}
-.gwi-prices:before {
-    content: "\e91c";
-}
-.gwi-dashboard:before {
-    content: "\e91d";
-}
-.gwi-billing-buy-credit:before {
-    content: "\e926";
-}
 .gwi-fast-forward:before {
     content: "\e939";
+}
+.gwi-star_border:before {
+    content: "\e938";
+}
+.gwi-star:before {
+    content: "\e93b";
 }
 .gwi-delete2:before {
     content: "\e93a";
@@ -296,3 +260,40 @@ i[class^="gwi-"], i[class*=" gwi-"] {
 .gwi-chevron-left:before {
     content: "\e906";
 }
+.gwi-trafficlog:before {
+    content: "\e92f";
+}
+.gwi-enable:before {
+    content: "\e923";
+}
+.gwi-disable:before {
+    content: "\e924";
+}
+.gwi-delete:before {
+    content: "\e917";
+}
+.gwi-oauth-facebook:before {
+    content: "\e91e";
+}
+.gwi-oauth-google:before {
+    content: "\e91f";
+}
+.gwi-notifications:before {
+    content: "\e918";
+}
+.gwi-billing-invoices:before {
+    content: "\e91a";
+}
+.gwi-settings:before {
+    content: "\e91b";
+}
+.gwi-prices:before {
+    content: "\e91c";
+}
+.gwi-dashboard:before {
+    content: "\e91d";
+}
+.gwi-billing-buy-credit:before {
+    content: "\e926";
+}
+

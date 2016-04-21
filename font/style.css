@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'GatewayAPI-Icons';
     src:
-        url('fonts/GatewayAPI-Icons.woff2?fg3dc8') format('woff2'),
-        url('fonts/GatewayAPI-Icons.ttf?fg3dc8') format('truetype'),
-        url('fonts/GatewayAPI-Icons.woff?fg3dc8') format('woff'),
-        url('fonts/GatewayAPI-Icons.svg?fg3dc8#GatewayAPI-Icons') format('svg');
+        url('fonts/GatewayAPI-Icons.woff2?ny39u1') format('woff2'),
+        url('fonts/GatewayAPI-Icons.ttf?ny39u1') format('truetype'),
+        url('fonts/GatewayAPI-Icons.woff?ny39u1') format('woff'),
+        url('fonts/GatewayAPI-Icons.svg?ny39u1#GatewayAPI-Icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,50 +24,14 @@ i {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.gwi-star:before {
-    content: "\e93b";
-}
-.gwi-star-o:before {
-    content: "\e938";
-}
-.gwi-trafficlog:before {
-    content: "\e92f";
-}
-.gwi-enable:before {
-    content: "\e923";
-}
-.gwi-disable:before {
-    content: "\e924";
-}
-.gwi-delete:before {
-    content: "\e917";
-}
-.gwi-oauth-facebook:before {
-    content: "\e91e";
-}
-.gwi-oauth-google:before {
-    content: "\e91f";
-}
-.gwi-notifications:before {
-    content: "\e918";
-}
-.gwi-billing-invoices:before {
-    content: "\e91a";
-}
-.gwi-settings:before {
-    content: "\e91b";
-}
-.gwi-prices:before {
-    content: "\e91c";
-}
-.gwi-dashboard:before {
-    content: "\e91d";
-}
-.gwi-billing-buy-credit:before {
-    content: "\e926";
-}
 .gwi-fast-forward:before {
     content: "\e939";
+}
+.gwi-star_border:before {
+    content: "\e938";
+}
+.gwi-star:before {
+    content: "\e93b";
 }
 .gwi-delete2:before {
     content: "\e93a";
@@ -215,5 +179,41 @@ i {
 }
 .gwi-chevron-left:before {
     content: "\e906";
+}
+.gwi-trafficlog:before {
+    content: "\e92f";
+}
+.gwi-enable:before {
+    content: "\e923";
+}
+.gwi-disable:before {
+    content: "\e924";
+}
+.gwi-delete:before {
+    content: "\e917";
+}
+.gwi-oauth-facebook:before {
+    content: "\e91e";
+}
+.gwi-oauth-google:before {
+    content: "\e91f";
+}
+.gwi-notifications:before {
+    content: "\e918";
+}
+.gwi-billing-invoices:before {
+    content: "\e91a";
+}
+.gwi-settings:before {
+    content: "\e91b";
+}
+.gwi-prices:before {
+    content: "\e91c";
+}
+.gwi-dashboard:before {
+    content: "\e91d";
+}
+.gwi-billing-buy-credit:before {
+    content: "\e926";
 }
 

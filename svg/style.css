@@ -13,12 +13,20 @@ Example showing how to change the color/size of the icons:
 }
 ======================================================================================== */
 
-.icon-star {
-	width: 0.9287109375em;
+.icon-chat_top_menu {
+	width: 1.3125em;
 }
 
-.icon-star-o {
-	width: 0.9287109375em;
+.icon-settings-webhook {
+	width: 1.125em;
+}
+
+.icon-settings-oauth-key {
+	width: 0.875em;
+}
+
+.icon-chat_left_menu {
+	width: 1.125em;
 }
 
 .icon-trafficlog {
@@ -59,20 +67,4 @@ Example showing how to change the color/size of the icons:
 
 .icon-billing-buy-credit {
 	width: 1.0004185267857135em;
-}
-
-.icon-chat_top_menu {
-	width: 1.3125em;
-}
-
-.icon-settings-webhook {
-	width: 1.125em;
-}
-
-.icon-settings-oauth-key {
-	width: 0.875em;
-}
-
-.icon-chat_left_menu {
-	width: 1.125em;
 }
