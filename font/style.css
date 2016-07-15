@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'GatewayAPI-Icons';
     src:
-        url('fonts/GatewayAPI-Icons.woff2?ny39u1') format('woff2'),
-        url('fonts/GatewayAPI-Icons.ttf?ny39u1') format('truetype'),
-        url('fonts/GatewayAPI-Icons.woff?ny39u1') format('woff'),
-        url('fonts/GatewayAPI-Icons.svg?ny39u1#GatewayAPI-Icons') format('svg');
+        url('fonts/GatewayAPI-Icons.woff2?7la0i4') format('woff2'),
+        url('fonts/GatewayAPI-Icons.ttf?7la0i4') format('truetype'),
+        url('fonts/GatewayAPI-Icons.woff?7la0i4') format('woff'),
+        url('fonts/GatewayAPI-Icons.svg?7la0i4#GatewayAPI-Icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -26,6 +26,12 @@ i {
 
 .gwi-fast-forward:before {
     content: "\e939";
+}
+.gwi-label_outline:before {
+    content: "\e93d";
+}
+.gwi-label:before {
+    content: "\e93e";
 }
 .gwi-star_border:before {
     content: "\e938";
@@ -158,6 +164,9 @@ i {
 }
 .gwi-statusio:before {
     content: "\e92b";
+}
+.gwi-see:before {
+    content: "\e93c";
 }
 .gwi-settings-oauth-key:before {
     content: "\e909";

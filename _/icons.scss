@@ -14,6 +14,7 @@ $gatewayapi-icons-font-path: ".." !default;
  * - take the css from the generated font-package and replace from the tag following i {...} and below with the same parts from the css.
  * - #{$gatewayapi-icons-font-path} variable must be used in the font urls.
  * - update the urls of the font-face to cache-bust with something unique
+ *   (preferable use the hash from font/style - see fonts/GatewayAPI-Icons.woff2?7la0i4)
  */
 .gwi-14 {
   font-size: 14px !important;
@@ -78,10 +79,10 @@ $gatewayapi-icons-font-path: ".." !default;
 
 @font-face {
   font-family: 'GatewayAPI-Icons';
-  src: url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.woff2?ownrvg') format('woff2'),
-  url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.ttf?ownrvg') format('truetype'),
-  url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.woff?ownrvg') format('woff'),
-  url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.svg?ownrvg#GatewayAPI-Icons') format('svg');
+  src: url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.woff2?7la0i4') format('woff2'),
+  url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.ttf?7la0i4') format('truetype'),
+  url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.woff?7la0i4') format('woff'),
+  url('#{$gatewayapi-icons-font-path}/font/fonts/GatewayAPI-Icons.svg?7la0i4#GatewayAPI-Icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -106,6 +107,12 @@ i[class^="gwi-"], i[class*=" gwi-"], i.gwi {
 
 .gwi-fast-forward:before {
     content: "\e939";
+}
+.gwi-label_outline:before {
+    content: "\e93d";
+}
+.gwi-label:before {
+    content: "\e93e";
 }
 .gwi-star_border:before {
     content: "\e938";
@@ -238,6 +245,9 @@ i[class^="gwi-"], i[class*=" gwi-"], i.gwi {
 }
 .gwi-statusio:before {
     content: "\e92b";
+}
+.gwi-see:before {
+    content: "\e93c";
 }
 .gwi-settings-oauth-key:before {
     content: "\e909";
