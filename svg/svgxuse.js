@@ -2,7 +2,7 @@
  * @copyright Copyright (c) 2016 IcoMoon.io
  * @license   Licensed under MIT license
  *            See https://github.com/Keyamoon/svgxuse
- * @version   1.1.17
+ * @version   1.1.21
  */
 /*jslint browser: true */
 /*global XDomainRequest, MutationObserver, window */
@@ -10,8 +10,8 @@
     'use strict';
     if (window && window.addEventListener) {
         var cache = Object.create(null); // holds xhr objects to prevent multiple requests
-        var checkUseElems,
-            tid; // timeout id
+        var checkUseElems;
+        var tid; // timeout id
         var debouncedCheck = function () {
             clearTimeout(tid);
             tid = setTimeout(checkUseElems, 100);
@@ -71,21 +71,23 @@
         };
         var xlinkNS = 'http://www.w3.org/1999/xlink';
         checkUseElems = function () {
-            var base,
-                bcr,
-                fallback = '', // optional fallback URL in case no base path to SVG file was given and no symbol definition was found.
-                hash,
-                i,
-                inProgressCount = 0,
-                isHidden,
-                Request,
-                url,
-                uses,
-                xhr;
+            var base;
+            var bcr;
+            var fallback = ''; // optional fallback URL in case no base path to SVG file was given and no symbol definition was found.
+            var hash;
+            var href;
+            var i;
+            var inProgressCount = 0;
+            var isHidden;
+            var Request;
+            var url;
+            var uses;
+            var xhr;
             function observeIfDone() {
                 // If done with making changes, start watching for chagnes in DOM again
                 inProgressCount -= 1;
                 if (inProgressCount === 0) { // if all xhrs were resolved
+                    unobserveChanges(); // make sure to remove old handlers
                     observeChanges(); // watch for changes to DOM
                 }
             }
@@ -132,7 +134,12 @@
                     // failed to get bounding rectangle of the use element
                     bcr = false;
                 }
-                url = uses[i].getAttributeNS(xlinkNS, 'href').split('#');
+                href = uses[i].getAttributeNS(xlinkNS, 'href');
+                if (href && href.split) {
+                    url = href.split('#');
+                } else {
+                    url = ["", ""];
+                }
                 base = url[0];
                 hash = url[1];
                 isHidden = bcr && bcr.left === 0 && bcr.right === 0 && bcr.top === 0 && bcr.bottom === 0;
@@ -177,9 +184,15 @@
                             // if it turns out that prepending the SVG is not necessary,
                             // abort the in-progress xhr.
                             cache[base].abort();
-                            cache[base].onload = undefined;
+                            delete cache[base].onload;
                             cache[base] = true;
                         }
+                    } else if (base.length && cache[base]) {
+                        attrUpdateFunc({
+                            useEl: uses[i],
+                            base: base,
+                            hash: hash
+                        })();
                     }
                 }
             }

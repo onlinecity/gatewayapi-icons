@@ -1,72 +1,72 @@
 .icon {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    stroke-width: 0;
-    stroke: currentColor;
-    fill: currentColor;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 }
 
 /* ==========================================
 Single-colored icons can be modified like so:
 .icon-name {
-    font-size: 32px;
-    color: red;
+  font-size: 32px;
+  color: red;
 }
 ========================================== */
 
 .icon-chat_top_menu {
-    width: 1.3125em;
+  width: 1.3125em;
 }
 
 .icon-settings-webhook {
-    width: 1.125em;
+  width: 1.125em;
 }
 
 .icon-settings-oauth-key {
-    width: 0.875em;
+  width: 0.875em;
 }
 
 .icon-chat_left_menu {
-    width: 1.125em;
+  width: 1.125em;
 }
 
 .icon-trafficlog {
-    width: 0.9288504464285714em;
+  width: 0.9288504464285714em;
 }
 
 .icon-enable {
-    width: 1.142578125em;
+  width: 1.142578125em;
 }
 
 .icon-disable {
-    width: 1.142578125em;
+  width: 1.142578125em;
 }
 
 .icon-delete {
-    width: 0.7861328125em;
+  width: 0.7861328125em;
 }
 
 .icon-oauth-facebook {
-    width: 0.587890625em;
+  width: 0.587890625em;
 }
 
 .icon-oauth-google {
-    width: 0.83984375em;
+  width: 0.83984375em;
 }
 
 .icon-billing-invoices {
-    width: 0.857421875em;
+  width: 0.857421875em;
 }
 
 .icon-settings {
-    width: 0.857421875em;
+  width: 0.857421875em;
 }
 
 .icon-prices {
-    width: 0.845703125em;
+  width: 0.845703125em;
 }
 
 .icon-billing-buy-credit {
-    width: 1.0004185267857135em;
+  width: 1.0004185267857135em;
 }
